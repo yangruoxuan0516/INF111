@@ -5,5 +5,5 @@
     "outDir": "out",
     "sourceMap": true
   },
-  "files": ["src/calculJours.ts", "src/moduleVacances.ts", "src/moduleTravail.ts"]
+  "include": ["src/**/*.ts"]
 }
