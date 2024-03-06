@@ -4,6 +4,7 @@ import {left, right, up, down} from './fusionMove.js';
 // import { setValue } from './case.js';
 import { newCase } from './new.js';
 import { lose , win } from './case.js';
+import { color } from './color.js';
 
 document.addEventListener('DOMContentLoaded', (event) => {
     window.addEventListener('keydown', (event: KeyboardEvent) => {
@@ -25,6 +26,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
                 else{
                     newCase();
                 }
+                color();
             }
             else if (event.key === 'ArrowDown') {
                 console.log(`bas`);
@@ -41,6 +43,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
                 else{
                     newCase();
                 }
+                color();
             }
             else if (event.key === 'ArrowLeft') {
                 console.log(`gauche`);
@@ -57,6 +60,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
                 else{
                     newCase();
                 }
+                color();
             }
             else if (event.key === 'ArrowRight') {
                 console.log(`droite`);
@@ -73,6 +77,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
                 else{
                     newCase();
                 }
+                color();
             }
 
             // TEST

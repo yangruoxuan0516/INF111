@@ -1,4 +1,5 @@
 import { isEmpty, setValue } from './case.js';
+import { color } from './color.js';
 
 document.addEventListener("DOMContentLoaded", (event) => {
     newGame();
@@ -32,6 +33,7 @@ function newGame(): void {
     else {
         setValue(i2, j2, 4);
     }    
+    color();
 }
 
 export function newCase(): void {
