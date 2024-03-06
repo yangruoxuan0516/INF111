@@ -7,7 +7,7 @@ function getCell(i: number, j: number): HTMLTableCellElement | undefined{
     }
 };
 
-export function setValue(id: string, i: number, j: number, value: number): boolean{
+export function setValue(i: number, j: number, value: number): boolean{
     const cell = getCell(i, j);
     if (cell) {
         if (value == 0) {
@@ -18,6 +18,7 @@ export function setValue(id: string, i: number, j: number, value: number): boole
         }
         return true;
     } else {
+        console.log('invalid cell');
         return false;
     }
 };
@@ -25,19 +26,46 @@ export function setValue(id: string, i: number, j: number, value: number): boole
 export function getValue(i: number, j: number): number{
     const cell = getCell(i, j);
     if (cell) {
-        console.log(Number(cell.innerHTML))
-        return Number(cell.innerHTML);
+        if (cell.innerHTML == '*') {
+            // console.log(0);
+            return 0;
+        }
+        else {
+            // console.log(Number(cell.innerHTML))
+            return Number(cell.innerHTML);
+        }
     } else {
-        console.log(0);
-        return 0;
+        console.log('invalid cell');
     }
 };
 
-// function isEmpty(i: number, j: number): boolean{
-//     const cell = getCell(i, j);
-//     if (cell) {
-//         cell.innerHTML = value.toString();
-//         return true;
-//     } else {
-//         return false;
-//     }};
+export function isEmpty(i: number, j: number): boolean{
+    const cell = getCell(i, j);
+    if (cell.innerHTML == '*') {
+        return true;
+    } else {
+        return false;
+    }
+};
+
+export function lose() : boolean {
+    for (let i = 1; i <= 4; i++){
+        for (let j = 1; j <= 4; j++){
+            if (isEmpty(i, j)) {
+                return false;
+            }
+        }
+    }
+    return true;
+};
+
+export function win(): boolean {
+    for (let i = 1; i <= 4; i++){
+        for (let j = 1; j <= 4; j++){
+            if (getValue(i, j) == 2048){
+                return true;
+            }
+        }
+    }
+    return false;
+}

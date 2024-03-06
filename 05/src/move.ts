@@ -9,8 +9,8 @@ export function moveRight(i: number): boolean{
                 k++;
             }
             if (k > j){
-                setValue('id', i, k, getValue(i, j));
-                setValue('id', i, j, 0);
+                setValue(i, k, getValue(i, j));
+                setValue(i, j, 0);
                 moved = true;
             }
         }
@@ -27,8 +27,8 @@ export function moveLeft(i: number): boolean{
                 k--;
             }
             if (k < j){
-                setValue('id', i, k, getValue(i, j));
-                setValue('id', i, j, 0);
+                setValue(i, k, getValue(i, j));
+                setValue(i, j, 0);
                 moved = true;
             }
         }
@@ -45,8 +45,8 @@ export function moveUp(j: number): boolean{
                 k--;
             }
             if (k < i){
-                setValue('id', k, j, getValue(i, j));
-                setValue('id', i, j, 0);
+                setValue(k, j, getValue(i, j));
+                setValue(i, j, 0);
                 moved = true;
             }
         }
@@ -64,12 +64,13 @@ export function moveDown(j: number): boolean{
                 k++;
             }
             if (k > i){
-                setValue('id', k, j, getValue(i, j));
-                setValue('id', i, j, 0);
+                setValue(k, j, getValue(i, j));
+                setValue(i, j, 0);
                 moved = true;
             }
         }
     }
+    console.log("moveDown(",j,") is called");
     return moved;
 };
 
