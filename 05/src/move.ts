@@ -51,7 +51,7 @@ export function moveUp(j: number): boolean{
             }
         }
     }
-    console.log("moveUp(",j,") is called");
+    // console.log("moveUp(",j,") is called");
     return moved;
 };
 
@@ -70,7 +70,7 @@ export function moveDown(j: number): boolean{
             }
         }
     }
-    console.log("moveDown(",j,") is called");
+    // console.log("moveDown(",j,") is called");
     return moved;
 };
 

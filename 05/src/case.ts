@@ -48,10 +48,21 @@ export function isEmpty(i: number, j: number): boolean{
     }
 };
 
-export function lose() : boolean {
+export function full() : boolean {
     for (let i = 1; i <= 4; i++){
         for (let j = 1; j <= 4; j++){
             if (isEmpty(i, j)) {
+                return false;
+            }
+        }
+    }
+    return true;
+};
+
+export function lose() : boolean {
+    for (let i = 1; i <= 3; i++){
+        for (let j = 1; j <= 3; j++){
+            if (getValue(i, j) == getValue(i+1, j) || getValue(i, j) == getValue(i, j+1)){
                 return false;
             }
         }

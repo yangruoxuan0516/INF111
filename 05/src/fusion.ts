@@ -33,7 +33,7 @@ export function fusionUp(j: number): boolean{
             moved = true;
         }
     }
-    console.log("fusionUP(",j,") is called");
+    // console.log("fusionUP(",j,") is called");
     return moved;
 };
 
@@ -46,6 +46,6 @@ export function fusionDown(j: number): boolean{
             moved = true;
         }
     }
-    console.log("fusionDown(",j,") is called");
+    // console.log("fusionDown(",j,") is called");
     return moved;
 };
