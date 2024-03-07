@@ -3,7 +3,6 @@ import { color } from './color.js';
 
 document.addEventListener("DOMContentLoaded", (event) => {
     newGame();
-    console.log("nouvelle partie lancée !");
   });
 
 function getRandomInt(min: number, max: number): number {
@@ -12,7 +11,16 @@ function getRandomInt(min: number, max: number): number {
     return Math.floor(Math.random() * (max - min + 1)) + min;
 }
 
-function newGame(): void {
+export function newGame(): void {
+    for (let i = 1; i <= 4; i++){
+        for (let j = 1; j <= 4; j++){
+            setValue(i, j, 0);
+        }
+    }
+    const scoreElement = document.getElementById('score');
+    let score = Number(scoreElement.innerHTML);
+    score = 0;
+    scoreElement.innerHTML = score.toString();
     const i1 = getRandomInt(1, 4);
     const j1 = getRandomInt(1, 4);
     const i2 = getRandomInt(1, 4);
@@ -34,6 +42,7 @@ function newGame(): void {
         setValue(i2, j2, 4);
     }    
     color();
+    console.log("nouvelle partie lancée !");
 }
 
 export function newCase(): void {
