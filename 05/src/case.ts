@@ -1,3 +1,5 @@
+import { pop } from './winning.js'
+
 function getCell(i: number, j: number): HTMLTableCellElement | undefined{
     if (1 <= i && i <= 4 && 1 <= j && j <= 4) {
         const c = document.getElementById(i.toString() + j.toString());
@@ -60,6 +62,8 @@ export function full() : boolean {
 };
 
 export function lose() : boolean {
+    const scoreElement = document.getElementById('score');
+    let score = Number(scoreElement.innerHTML);
     for (let i = 1; i <= 3; i++){
         for (let j = 1; j <= 3; j++){
             if (getValue(i, j) == getValue(i+1, j) || getValue(i, j) == getValue(i, j+1)){
@@ -67,13 +71,18 @@ export function lose() : boolean {
             }
         }
     }
+    window.alert('Oops c\'est la fin ! T\'as fait ' + score + ' coups :3');
     return true;
 };
 
-export function win(): boolean {
+export async function win(): Promise<boolean> {
+    const scoreElement = document.getElementById('score');
+    let score = Number(scoreElement.innerHTML);
     for (let i = 1; i <= 4; i++){
         for (let j = 1; j <= 4; j++){
-            if (getValue(i, j) == 2048){
+            if (getValue(i, j) == 8){
+                await pop();
+                window.alert('Bravo t\'as gagné ! T\'as fait ' + score + ' coups :3');
                 return true;
             }
         }

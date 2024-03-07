@@ -49,4 +49,5 @@ export function newCase(): void {
     else {
         setValue(i, j, 4);
     }
+    color();
 }

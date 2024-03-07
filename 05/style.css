@@ -1,7 +1,10 @@
 h1 {
     /* property: value; */
     color: red; /* Changes the text color to blue */
-}
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: 900;
+    font-size: 50px;
+}   
 
 table {
     border: 1px solid black;
@@ -12,8 +15,37 @@ table {
 }
 table td {
     border: 1px solid black;
-    width: 75px;
-    height: 75px;
+    width: 100px;
+    height: 100px;
     text-align: center;
     vertical-align: middle; 
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: 400;
+    font-size: 30px;
+}
+
+particle {
+    position: fixed;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    pointer-events: none;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+#score {
+    margin-top: -20px;
+    margin-bottom: 20px; /* Adjust as needed */
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: 900;
 }

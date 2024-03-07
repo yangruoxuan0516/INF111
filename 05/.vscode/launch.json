@@ -8,7 +8,7 @@
             "name": "Launch localhost:5500",
             "type": "chrome",
             "request": "launch",
-            "url": "http://localhost:5500",
+            "url": "http://localhost:5500/exo/05/",
             "webRoot": "${workspaceFolder}",
         }
     ]
