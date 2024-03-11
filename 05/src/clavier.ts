@@ -7,8 +7,9 @@ import { full, lose , win } from './result.js';
 // import { color } from './color.js';
 import { pop } from './winning.js';
 
-document.addEventListener('DOMContentLoaded', () => {
-    window.addEventListener('keydown', (event: KeyboardEvent) => {
+// document.addEventListener('DOMContentLoaded', () => {
+//     window.addEventListener('keydown', (event: KeyboardEvent) => {
+export function handleKeyDown(event: KeyboardEvent) {
         const scoreElement = document.getElementById('score');
         let score = Number(scoreElement.innerHTML);
             if (event.key === 'ArrowUp') {
@@ -84,6 +85,12 @@ document.addEventListener('DOMContentLoaded', () => {
                 }
             }
         scoreElement.innerHTML = score.toString();
-    });
-});
+//     });
+// });
+        };
+
+
+document.addEventListener('DOMContentLoaded', () => {
+    window.addEventListener('keydown', handleKeyDown);
+}); 
 

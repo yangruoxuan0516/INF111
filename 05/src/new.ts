@@ -1,5 +1,6 @@
 import { isEmpty, setValue } from './case.js';
 import { color } from './color.js';
+import { handleKeyDown } from './clavier.js';
 
 document.addEventListener("DOMContentLoaded", (event) => {
     newGame();
@@ -42,6 +43,7 @@ export function newGame(): void {
         setValue(i2, j2, 4);
     }    
     color();
+    window.addEventListener('keydown', handleKeyDown);
     console.log("nouvelle partie lancée !");
 }
 
