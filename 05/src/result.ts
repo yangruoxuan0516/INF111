@@ -25,7 +25,6 @@ export function lose() : boolean {
             }
         }
     }
-    // window.alert('Oops c\'est la fin ! T\'as fait ' + score + ' coups :3');
     showDialogLose();
     window.removeEventListener('keydown', handleKeyDown);
     return true;
@@ -37,11 +36,10 @@ export function win(): boolean {
     let score = Number(scoreElement.innerHTML);
     for (let i = 1; i <= 4; i++){
         for (let j = 1; j <= 4; j++){
-            if (getValue(i, j) == 8){
+            if (getValue(i, j) == 2048){
                 pop();
                 showDialogWin();
                 window.removeEventListener('keydown', handleKeyDown);
-                // window.alert('Bravo t\'as gagné ! T\'as fait ' + score + ' coups :3');
                 return true;
             }
         }

@@ -1,6 +1,3 @@
-import { pop } from './winning.js'
-import { showDialogWin, showDialogLose } from './modal.js';
-
 function getCell(i: number, j: number): HTMLTableCellElement | undefined{
     if (1 <= i && i <= 4 && 1 <= j && j <= 4) {
         const c = document.getElementById(i.toString() + j.toString());

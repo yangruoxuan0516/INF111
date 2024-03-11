@@ -1,96 +1,99 @@
-import {left, right, up, down} from './fusionMove.js';
-// import { moveUp, moveDown, moveLeft, moveRight } from './move.js';
-// import { fusionUp, fusionDown, fusionLeft, fusionRight } from './fusion.js';
-import { getValue } from './case.js';
-import { newCase } from './new.js';
-import { full, lose , win } from './result.js';
-// import { color } from './color.js';
-import { pop } from './winning.js';
+import { left, right, up, down } from "./fusionMove.js";
+import { newCase } from "./new.js";
+import { full, lose, win } from "./result.js";
+import { showDialogNoMove } from "./modal.js";
 
-// document.addEventListener('DOMContentLoaded', () => {
-//     window.addEventListener('keydown', (event: KeyboardEvent) => {
 export function handleKeyDown(event: KeyboardEvent) {
-        const scoreElement = document.getElementById('score');
-        let score = Number(scoreElement.innerHTML);
-            if (event.key === 'ArrowUp') {
-                console.log(`haut`);
-                let moved = false;
-                for(let i = 1; i <= 4; i++){
-                    if(up(i)){
-                        moved = true;
-                    }
-                }
-                if(moved){
-                    score++;
-                }
-                const WIN = win();
-                const LOSE = lose();
-                const FULL = full();
-                if (!FULL && !WIN && !LOSE && moved){
-                    newCase();
-                }
-            }
-            else if (event.key === 'ArrowDown') {
-                console.log(`bas`);
-                let moved = false;
-                for(let i = 1; i <= 4; i++){
-                    if(down(i)){
-                        moved = true;
-                    };
-                }
-                if(moved){
-                    score++;
-                }
-                const WIN = win();
-                const LOSE = lose();
-                const FULL = full();
-                if (!FULL && !WIN && !LOSE && moved){
-                    newCase();
-                }
-            }
-            else if (event.key === 'ArrowLeft') {
-                console.log(`gauche`);
-                let moved = false;
-                for(let j = 1; j <= 4; j++){
-                    if(left(j)){
-                        moved = true;
-                    };
-                }
-                if(moved){
-                    score++;
-                }
-                const WIN = win();
-                const LOSE = lose();
-                const FULL = full();
-                if (!FULL && !WIN && !LOSE && moved){
-                    newCase();
-                }
-            }
-            else if (event.key === 'ArrowRight') {
-                console.log(`droite`);
-                let moved = false;
-                for(let j = 1; j <= 4; j++){
-                    if(right(j)){
-                        moved = true;
-                    };
-                }
-                if(moved){
-                    score++;
-                }
-                const WIN = win();
-                const LOSE = lose();
-                const FULL = full();
-                if (!FULL && !WIN && !LOSE && moved){
-                    newCase();
-                }
-            }
-        scoreElement.innerHTML = score.toString();
-//     });
-// });
-        };
+  const scoreElement = document.getElementById("score");
+  let score = Number(scoreElement.innerHTML);
+  if (event.key === "ArrowUp") {
+    console.log(`haut`);
+    let moved = false;
+    for (let i = 1; i <= 4; i++) {
+      if (up(i)) {
+        moved = true;
+      }
+    }
+    if (moved) {
+      score++;
+    }
+    else{
+      showDialogNoMove();
+      window.removeEventListener('keydown', handleKeyDown);
+    }
+    const WIN = win();
+    const LOSE = lose();
+    const FULL = full();
+    if (!FULL && !WIN && !LOSE && moved) {
+      newCase();
+    }
+  } else if (event.key === "ArrowDown") {
+    console.log(`bas`);
+    let moved = false;
+    for (let i = 1; i <= 4; i++) {
+      if (down(i)) {
+        moved = true;
+      }
+    }
+    if (moved) {
+      score++;
+    }    
+    else{
+      showDialogNoMove();
+      window.removeEventListener('keydown', handleKeyDown);
+    }
+    const WIN = win();
+    const LOSE = lose();
+    const FULL = full();
+    if (!FULL && !WIN && !LOSE && moved) {
+      newCase();
+    }
+  } else if (event.key === "ArrowLeft") {
+    console.log(`gauche`);
+    let moved = false;
+    for (let j = 1; j <= 4; j++) {
+      if (left(j)) {
+        moved = true;
+      }
+    }
+    if (moved) {
+      score++;
+    }
+    else{
+      showDialogNoMove();
+      window.removeEventListener('keydown', handleKeyDown);
+    }
+    const WIN = win();
+    const LOSE = lose();
+    const FULL = full();
+    if (!FULL && !WIN && !LOSE && moved) {
+      newCase();
+    }
+  } else if (event.key === "ArrowRight") {
+    console.log(`droite`);
+    let moved = false;
+    for (let j = 1; j <= 4; j++) {
+      if (right(j)) {
+        moved = true;
+      }
+    }
+    if (moved) {
+      score++;
+    }
+    else{
+      showDialogNoMove();
+      window.removeEventListener('keydown', handleKeyDown);
+    }
+    const WIN = win();
+    const LOSE = lose();
+    const FULL = full();
+    if (!FULL && !WIN && !LOSE && moved) {
+      newCase();
+    }
+  }
+  scoreElement.innerHTML = score.toString();
+}
 
-
-document.addEventListener('DOMContentLoaded', () => {
-    window.addEventListener('keydown', handleKeyDown);
-}); 
-
+document.addEventListener("DOMContentLoaded", () => {
+  window.addEventListener("keydown", handleKeyDown);
+});
