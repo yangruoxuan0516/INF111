@@ -42,7 +42,7 @@ function deserializeUsers(UserString:string):IUser[]{
 }
 console.log(deserializeUsers(serializeUsers(Users)));
 
-let deuxiemeUserData = deserializeUsers(serializeUsers(Users))[1] as User;
+let deuxiemeUserData = deserializeUsers(serializeUsers(Users))[1];
 let deuxiemeUser = new User(deuxiemeUserData.id, deuxiemeUserData.name, deuxiemeUserData.age, deuxiemeUserData.scores);
 console.log(deuxiemeUser.name, deuxiemeUser.getMaxScore(), deuxiemeUser.getAverageScore());
 /*
@@ -52,3 +52,7 @@ When you use JSON.parse in the deserializeUsers function, it creates plain JavaS
 The as User syntax in TypeScript is a type assertion, which tells the TypeScript compiler to treat deuxiemeUser as an instance of User. However, it doesn't actually convert deuxiemeUser to a User instance.
 To fix this, you need to actually create a User instance.
 */
+
+// // prof propose d'utiliser Object.assign()
+// let deuxiemeUser2: User = Object.assign(new User(0,'',0,[0,0,0]), deserializeUsers(serializeUsers(Users))[1]);
+// console.log(deuxiemeUser2.name, deuxiemeUser2.getMaxScore(), deuxiemeUser2.getAverageScore());
