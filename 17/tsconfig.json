@@ -1,0 +1,10 @@
+{
+  "compilerOptions": {
+    "target": "es6",
+    "outDir": "out",
+    "sourceMap": true,
+    "module": "es6",
+    "moduleResolution": "Node"
+  },
+  "files": ["src/app.ts"]
+}
