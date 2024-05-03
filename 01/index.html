@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>01</title>
+</head>
+
+<body>
+    <a href="https://webdev101.gitlab.io/#/01_hello_world_typescript/" style="font-style: italic; color: gold;">Please check out the question on the amazing website by Mr. Rémi SHARROCK :3</a>
+
+    <div id="content"></div>
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+    <script>
+        fetch('./typage.md')
+            .then(response => response.text())
+            .then(text => document.getElementById('content').innerHTML = marked.parse(text));
+    </script>
+  </body>
+
+</html>
