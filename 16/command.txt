@@ -1,0 +1,9 @@
+cp ../prof\'sCode/public/16_http_CRUD/db.json .
+
+cp ../../prof\'sCode/public/16_http_CRUD/db.json .
+
+npm install json-server
+
+npx json-server db.json
+
+http://localhost:3000
