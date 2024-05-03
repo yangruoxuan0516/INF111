@@ -65,25 +65,25 @@ const comments = [
 ];
 
 const urls = [
-    '../01/index.html',
-    '../02/index.html',
-    '../03/index.html',
-    '../04/index.html',
-    '../05/index.html',
-    '../06/index.html', 
-    '../07/index.html',
-    '../08/index.html',
-    '../09/index.html',
-    '../10/index.html',
-    '../11/index.html',
-    '../12/index.html',
-    '../13/index.html',
-    '../14/index.html',
-    '../15/index.html', // TODO: deal with CORS
-    '../16/index.html', // same here
-    '../17/index.html', // same here
-    '../18/index.html',
-    '../pf/index.html',
+    './01/index.html',
+    './02/index.html',
+    './03/index.html',
+    './04/index.html',
+    './05/index.html',
+    './06/index.html', 
+    './07/index.html',
+    './08/index.html',
+    './09/index.html',
+    './10/index.html',
+    './11/index.html',
+    './12/index.html',
+    './13/index.html',
+    './14/index.html',
+    './15/index.html', // TODO: deal with CORS
+    './16/index.html', // same here
+    './17/index.html', // same here
+    './18/index.html',
+    './pf/index.html',
 ];
 
 // Loop over the colors
