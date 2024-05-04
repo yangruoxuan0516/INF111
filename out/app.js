@@ -62,25 +62,25 @@ const comments = [
     'Loved the color scheme...',
 ];
 const urls = [
-    '../01/index.html',
-    '../02/index.html',
-    '../03/index.html',
-    '../04/index.html',
-    '../05/index.html',
-    '../06/index.html',
-    '../07/index.html',
-    '../08/index.html',
-    '../09/index.html',
-    '../10/index.html',
-    '../11/index.html',
-    '../12/index.html',
-    '../13/index.html',
-    '../14/index.html',
-    '../15/index.html', // TODO: deal with CORS
-    '../16/index.html', // same here
-    '../17/index.html', // same here
-    '../18/index.html',
-    '../pf/index.html',
+    'https://yangruoxuan0516.github.io/INF111/01/index.html',
+    'https://yangruoxuan0516.github.io/INF111/02/index.html',
+    'https://yangruoxuan0516.github.io/INF111/03/index.html',
+    'https://yangruoxuan0516.github.io/INF111/04/index.html',
+    'https://yangruoxuan0516.github.io/INF111/05/index.html',
+    'https://yangruoxuan0516.github.io/INF111/06/index.html',
+    'https://yangruoxuan0516.github.io/INF111/07/index.html',
+    'https://yangruoxuan0516.github.io/INF111/08/index.html',
+    'https://yangruoxuan0516.github.io/INF111/09/index.html',
+    'https://yangruoxuan0516.github.io/INF111/10/index.html',
+    'https://yangruoxuan0516.github.io/INF111/11/index.html',
+    'https://yangruoxuan0516.github.io/INF111/12/index.html',
+    'https://yangruoxuan0516.github.io/INF111/13/index.html',
+    'https://yangruoxuan0516.github.io/INF111/14/index.html',
+    'https://yangruoxuan0516.github.io/INF111/15/index.html', // TODO: deal with CORS
+    'https://yangruoxuan0516.github.io/INF111/16/index.html', // same here
+    'https://yangruoxuan0516.github.io/INF111/17/index.html', // same here
+    'https://yangruoxuan0516.github.io/INF111/18/index.html',
+    'https://yangruoxuan0516.github.io/INF111/pf/index.html',
 ];
 // Loop over the colors
 for (let i = 0; i < colors.length; i++) {
