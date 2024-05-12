@@ -113,6 +113,13 @@ for (let i = 0; i < colors.length; i++) {
     TextBack.innerHTML = `<a href="${urls[i]}">${comments[i]}</a>`;
     flipCardBack.appendChild(TextBack);
 
+    if (i == 4){
+        const TextDemo = document.createElement('p');
+        TextDemo.innerHTML = `<a href="https://yangruoxuan0516.github.io/INF111/05_demo/index.html">Demo</a>`;
+        flipCardBack.appendChild(TextDemo);
+        TextDemo.style.color = 'red';
+    }
+
     document.body.appendChild(flipCardContainer);
 
 }
