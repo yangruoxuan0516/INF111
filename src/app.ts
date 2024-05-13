@@ -115,7 +115,14 @@ for (let i = 0; i < colors.length; i++) {
 
     if (i == 4){
         const TextDemo = document.createElement('p');
-        TextDemo.innerHTML = `<a href="https://yangruoxuan0516.github.io/INF111/05_demo/index.html">Demo</a>`;
+        TextDemo.innerHTML = `<a href="https://yangruoxuan0516.github.io/INF111/05_demo/index.html">&nbsp;Demo</a>`;
+        flipCardBack.appendChild(TextDemo);
+        TextDemo.style.color = 'red';
+    }
+
+    if (i == 18){
+        const TextDemo = document.createElement('p');
+        TextDemo.innerHTML = `<a href="https://yangruoxuan0516.github.io/INF111/pf_demo/index.html">&nbsp;Demo</a>`;
         flipCardBack.appendChild(TextDemo);
         TextDemo.style.color = 'red';
     }

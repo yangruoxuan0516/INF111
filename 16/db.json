@@ -25,9 +25,7 @@
     {
       "id": "c29a",
       "name": "Pizza",
-      "restaurantIds": [
-        "55fa"
-      ]
+      "restaurantIds": []
     },
     {
       "id": "34b0",
