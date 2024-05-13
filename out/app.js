@@ -109,6 +109,12 @@ for (let i = 0; i < colors.length; i++) {
         flipCardBack.appendChild(TextDemo);
         TextDemo.style.color = 'red';
     }
+    if (i == 18) {
+        const TextDemo = document.createElement('p');
+        TextDemo.innerHTML = `<a href="https://yangruoxuan0516.github.io/INF111/pf_demo/index.html">&nbsp;Demo</a>`;
+        flipCardBack.appendChild(TextDemo);
+        TextDemo.style.color = 'red';
+    }
     document.body.appendChild(flipCardContainer);
 }
 //# sourceMappingURL=app.js.map
